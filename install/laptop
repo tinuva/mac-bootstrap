@@ -178,7 +178,8 @@ cask "dropbox"
 cask "firefox"
 cask "google-chrome"
 cask "iterm2"
-cask "font-hack-nerd-font"
+cask "font-firacode-nerd-font-mono"
+cask "font-firacode-nerd-font"
 
 # mas-cli
 # https://github.com/mas-cli/mas
