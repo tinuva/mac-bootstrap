@@ -138,7 +138,6 @@ printf "Bootstrap branch: ==> [%s]\\n" "$BOOTSTRAP_BRANCH"
 printf "Dotfiles branch:  ==> [%s]\\n" "$DOTFILES_BRANCH"
 printf "Computer name:    ==> [%s]\\n" "$COMPUTER_NAME"
 printf "Host name:        ==> [%s]\\n" "$HOST_NAME"
-printf "Time zone:        ==> [%s]\\n" "$TIME_ZONE"
 printf "Node.js version:  ==> [%s]\\n" "$ASDF_NODEJS_VERSION"
 printf "Ruby version:     ==> [%s]\\n" "$ASDF_RUBY_VERSION"
 

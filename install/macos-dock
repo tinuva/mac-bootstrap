@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dockutil --no-restart --remove all
+# dockutil --no-restart --remove all
 # dockutil --no-restart --add "/Applications/Launchpad.app"
 # dockutil --no-restart --add "/Applications/Google Chrome.app"
 # dockutil --no-restart --add "/Applications/Spark.app"
@@ -19,7 +19,7 @@ dockutil --no-restart --remove all
 # dockutil --no-restart --add "/Applications/Dash.app"
 # dockutil --no-restart --add "/Applications/System Preferences.app"
 
-killall Dock
+# killall Dock
 
 # If you have trouble with icons appearing as generic placeholders, try running
 # the following commands.
