@@ -13,7 +13,7 @@ Previous versions of Mac Bootstrap have been successfully tested on the followin
 * Sierra (10.12)
 * El Capitan (10.11)
 
-&#9657; **Looking for dotfiles only? Check out [My Dotfiles for macOS](http://jsua.co/dotfiles)**
+&#9657; **Looking for dotfiles only? Check out [My Dotfiles for macOS](http://github.com/jbabin91/dotfiles-1)**
 
 ## Prerequisites
 
@@ -34,12 +34,12 @@ Sign in to the Mac App Store. If you don't do this before running the `bootstrap
 To install with a one-liner, run this:
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/joshukraine/mac-bootstrap/master/bootstrap && sh bootstrap 2>&1 | tee ~/bootstrap.log
+curl --remote-name https://raw.githubusercontent.com/jbabin91/mac-bootstrap/master/bootstrap && sh bootstrap 2>&1 | tee ~/bootstrap.log
 ```
 
 Want to read through the script first?
 ```sh
-curl --remote-name https://raw.githubusercontent.com/joshukraine/mac-bootstrap/master/bootstrap
+curl --remote-name https://raw.githubusercontent.com/jbabin91/mac-bootstrap/master/bootstrap
 less bootstrap
 sh bootstrap 2>&1 | tee ~/bootstrap.log
 ```
