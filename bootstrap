@@ -26,17 +26,16 @@ osname=$(uname)
 export COMMANDLINE_TOOLS="/Library/Developer/CommandLineTools"
 export OLD_DOTFILES_BACKUP=$HOME/old_dotfiles_backup
 export DICTIONARY_DIR=$HOME/Library/Spelling
-export DOTFILES_REPO_URL="https://github.com/joshukraine/dotfiles.git"
+export DOTFILES_REPO_URL="https://github.com/jbabin91/dotfiles-1.git"
 export DOTFILES_DIR=$HOME/dotfiles
-export BOOTSTRAP_REPO_URL="https://github.com/joshukraine/mac-bootstrap.git"
+export BOOTSTRAP_REPO_URL="https://github.com/jbabin91/mac-bootstrap.git"
 export BOOTSTRAP_DIR=$HOME/mac-bootstrap
 
 DEFAULT_BOOTSTRAP_BRANCH="master"
 DEFAULT_DOTFILES_BRANCH="master"
-DEFAULT_COMPUTER_NAME="Joshua's Mac"
-DEFAULT_HOST_NAME="joshuas-mac"
-DEFAULT_TIME_ZONE="Europe/Kiev"
-DEFAULT_NODEJS_VERSION="10.2.1"
+DEFAULT_COMPUTER_NAME="Jace's MacBook"
+DEFAULT_HOST_NAME="jace-mac"
+DEFAULT_NODEJS_VERSION="10.8.0"
 DEFAULT_RUBY_VERSION="2.5.1"
 
 
@@ -121,12 +120,6 @@ export COMPUTER_NAME=${COMPUTER_NAME:-$DEFAULT_COMPUTER_NAME}
 printf "\\nEnter a host name for your Mac. (Leave blank for default: %s)\\n" "$DEFAULT_HOST_NAME"
 read -r -p "> " HOST_NAME
 export HOST_NAME=${HOST_NAME:-$DEFAULT_HOST_NAME}
-
-printf "\\nEnter your desired time zone.
-To view available options run \`sudo systemsetup -listtimezones\`
-(Leave blank for default: %s)\\n" "$DEFAULT_TIME_ZONE"
-read -r -p "> " TIME_ZONE
-export TIME_ZONE=${TIME_ZONE:-$DEFAULT_TIME_ZONE}
 
 printf "\\nWhich version of Node.js would you like to install?
 Available versions: https://semver.io/node/versions
@@ -242,25 +235,10 @@ bootstrap_echo "Done!"
 
 
 ################################################################################
-# 6. Install Ukrainian language utilities
-#
-# Reference:
-# * http://apple.stackexchange.com/a/11842/75491
-# * http://extensions.services.openoffice.org/en/project/ukrainian-dictionary
+# 6. Install Fira Code font
 ################################################################################
 
-bootstrap_echo "Step 6: Installing Ukrainian language utilities..."
-
-cp "$BOOTSTRAP_DIR"/lib/{hyph_uk.dic,uk_UA.aff,uk_UA.dic} "$DICTIONARY_DIR"
-
-bootstrap_echo "Done!"
-
-
-################################################################################
-# 7. Install Fira Code font
-################################################################################
-
-bootstrap_echo "Step 7: Installing Fira Code fixed-width font..."
+bootstrap_echo "Step 6: Installing Fira Code fixed-width font..."
 if [ -d "$HOME"/src/fonts ]; then
   rm -rf "$HOME"/src/fonts
 fi
@@ -272,10 +250,10 @@ bootstrap_echo "Done!"
 
 
 ################################################################################
-# 8. Set macOS preferences
+# 7. Set macOS preferences
 ################################################################################
 
-bootstrap_echo "Step 8: Setting macOS preferences..."
+bootstrap_echo "Step 7: Setting macOS preferences..."
 
 # shellcheck source=/dev/null
 source "$BOOTSTRAP_DIR"/install/macos-defaults

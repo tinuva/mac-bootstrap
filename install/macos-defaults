@@ -32,7 +32,7 @@ sudo pmset -a standbydelay 10800
 # defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Set scrollbar behavior
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
@@ -76,7 +76,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 sudo systemsetup -setrestartfreeze on
 
 # Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+# sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Disable Notification Center and remove the menu bar icon
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
@@ -98,25 +98,26 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 
 # Trackpad: enable tap to click for this user and for the login screen
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+# defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+# defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad 
+# TrackpadCornerSecondaryClick -int 2
 # defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 # defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Enable “natural” (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 # defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
@@ -134,13 +135,13 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "us"
-defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
-defaults write NSGlobalDomain AppleMetricUnits -bool false
+# defaults write NSGlobalDomain AppleLanguages -array "en" "us"
+# defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+# defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+# defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "$TIME_ZONE" > /dev/null
+# systemsetup -settimezone "$TIME_ZONE" > /dev/null
 
 # Disable auto-correct
 # defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -166,7 +167,7 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Enable HiDPI display modes (requires restart)
-sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+# sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
 # Finder                                                                      #
@@ -252,7 +253,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 ###############################################################################
 
 # Position dock on the left side of the screen
-defaults write com.apple.dock orientation -string "left"
+#defaults write com.apple.dock orientation -string "left"
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
@@ -261,7 +262,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Set the icon size of Dock items to 72 pixels
-defaults write com.apple.dock tilesize -int 72
+# defaults write com.apple.dock tilesize -int 72
 
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
@@ -273,10 +274,10 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
+# defaults write com.apple.dashboard mcx-disabled -bool true
 
 # Don’t show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
+# defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
@@ -315,8 +316,8 @@ defaults write com.apple.dock showhidden -bool true
 # defaults write com.apple.dock wvous-tr-corner -int 4
 # defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom right screen corner → Display sleep
-defaults write com.apple.dock wvous-br-corner -int 10
-defaults write com.apple.dock wvous-br-modifier -int 0
+# defaults write com.apple.dock wvous-br-corner -int 10
+# defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
 # Safari & WebKit                                                             #
