@@ -110,6 +110,7 @@ laptop_echo "Updating Homebrew formulae ..."
 brew update --force # https://github.com/Homebrew/brew/issues/1151
 brew bundle --file=- <<EOF
 tap "caskroom/cask"
+tap "caskroom/fonts"
 tap "caskroom/versions"
 tap "homebrew/bundle"
 tap "homebrew/core"
@@ -168,8 +169,8 @@ brew "zsh"
 
 # homebrew-cask
 # https://github.com/caskroom/homebrew-cask
-cask "dropbox"
-cask "fantastical"
+cask_args appdir: "/Applications"
+cask "firefox"
 cask "google-chrome"
 cask "iterm2"
 EOF
@@ -221,6 +222,12 @@ number_of_cores=$(sysctl -n hw.ncpu)
 bundle config --global jobs $((number_of_cores - 1))
 
 laptop_echo "Installing latest Node..."
+PATH="$PATH:$ASDF_DIR/installs/nodejs/$ASDF_NODEJS_VERSION/bin"
+cat << EOF > "$HOME"/.default-npm-packages
+neovim
+create-react-app
+vue-cli
+EOF
 bash "$HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring"
 install_asdf_language "nodejs" "$ASDF_NODEJS_VERSION"
 echo "Node --> $(command -v node)"
