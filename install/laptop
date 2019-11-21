@@ -166,7 +166,7 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "unixodbc" # asdf dependency
 brew "wget"
 brew "xz"
-brew "yarn", args: ["without-node"]
+brew "yarn", args: ["ignore-dependencies"]
 brew "zsh"
 
 # homebrew-cask
