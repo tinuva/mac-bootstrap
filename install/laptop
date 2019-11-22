@@ -178,9 +178,12 @@ cask "iterm2"
 cask "vivaldi"
 EOF
 
-chown admin /usr/local/sbin/mtr
-chown admin /usr/local/sbin/mtr-packet
+chown root /usr/local/sbin/mtr
+chown root /usr/local/sbin/mtr-packet
 chmod 4555 /usr/local/sbin/mtr-packet
+
+chown root /usr/local/sbin/iftop
+chmod 4555 /usr/local/sbin/iftop
 
 laptop_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
