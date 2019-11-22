@@ -109,7 +109,7 @@ fi
 laptop_echo "Updating Homebrew formulae ..."
 brew update --force # https://github.com/Homebrew/brew/issues/1151
 brew bundle --file=- <<EOF
-tap "homebrew/cask-cask" #tap "caskroom/cask"
+#tap "homebrew/cask-cask" #tap "caskroom/cask"
 tap "homebrew/cask-fonts" #tap "caskroom/fonts"
 tap "homebrew/cask-versions" #tap "caskroom/versions"
 tap "homebrew/bundle"
