@@ -182,12 +182,12 @@ cask "gimp"
 cask "visual-studio-code"
 EOF
 
-chown root /usr/local/sbin/mtr
-chown root /usr/local/sbin/mtr-packet
-chmod 4555 /usr/local/sbin/mtr-packet
+sudo chown root /usr/local/sbin/mtr
+sudo chown root /usr/local/sbin/mtr-packet
+sudo chmod 4555 /usr/local/sbin/mtr-packet
 
-chown root /usr/local/sbin/iftop
-chmod 4555 /usr/local/sbin/iftop
+sudo chown root /usr/local/sbin/iftop
+sudo chmod 4555 /usr/local/sbin/iftop
 
 laptop_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
