@@ -117,6 +117,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "thoughtbot/formulae"
 tap "universal-ctags/universal-ctags"
+tap "teamookla/speedtest"
 
 # Need to install openssl before libyaml
 brew "openssl"
@@ -156,6 +157,7 @@ brew "readline"
 brew "reattach-to-user-namespace"
 brew "rsync"
 brew "shellcheck"
+brew "speedtest", force: true
 brew "sqlite"
 brew "ssh-copy-id"
 brew "the_silver_searcher"
@@ -177,6 +179,7 @@ cask_args appdir: "/Applications"
 cask "iterm2"
 cask "vivaldi"
 cask "gimp"
+cask "visual-studio-code"
 EOF
 
 chown root /usr/local/sbin/mtr
