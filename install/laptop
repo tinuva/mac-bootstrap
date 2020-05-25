@@ -190,6 +190,10 @@ sudo chmod 4555 /usr/local/sbin/mtr-packet
 sudo chown root /usr/local/sbin/iftop
 sudo chmod 4555 /usr/local/sbin/iftop
 
+# allow apps from anywhere
+### See: https://www.howtogeek.com/205393/gatekeeper-101-why-your-mac-only-allows-apple-approved-software-by-default/
+sudo spctl --master-disable
+
 # VSCode / Codium extensions
 code --install-extension fede-crc.thanatos # Thanatos theme
 code --install-extension hookyqr.beautify
