@@ -179,7 +179,8 @@ cask_args appdir: "/Applications"
 cask "iterm2"
 cask "vivaldi"
 cask "gimp"
-cask "visual-studio-code"
+#cask "visual-studio-code"
+cask "vscodium"
 EOF
 
 sudo chown root /usr/local/sbin/mtr
@@ -188,6 +189,20 @@ sudo chmod 4555 /usr/local/sbin/mtr-packet
 
 sudo chown root /usr/local/sbin/iftop
 sudo chmod 4555 /usr/local/sbin/iftop
+
+# VSCode / Codium extensions
+code --install-extension fede-crc.thanatos # Thanatos theme
+code --install-extension hookyqr.beautify
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension esbenp.prettier-vscode
+code --install-extension ms-python.python
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode-remote.remote-ssh
+code --install-extension ms-vscode-remote.remote-ssh-edit
+code --install-extension ms-vscode-remote.remote-wsl
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
+code --install-extension rafaelmaiolla.remote-vscode
 
 laptop_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
