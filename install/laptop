@@ -212,6 +212,19 @@ code --install-extension rafaelmaiolla.remote-vscode
 # set back
 sudo spctl --master-enable
 
+# Set theme for VSCodium
+#mkdir -p ~/Library/Application\ Support/VSCodium/User
+
+cat >~/Library/Application\ Support/VSCodium/User/settings.json  <<EOL
+{
+    "[json]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Thanatos"
+}
+EOL
+
 laptop_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.0
