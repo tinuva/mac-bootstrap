@@ -177,9 +177,10 @@ cask_args appdir: "/Applications"
 #cask "firefox"
 #cask "google-chrome"
 cask "iterm2"
-cask "vivaldi"
+#cask "vivaldi"
 cask "gimp"
 #cask "visual-studio-code"
+cask "brave-browser"
 cask "vscodium"
 EOF
 
