@@ -208,6 +208,7 @@ code --install-extension ms-vscode-remote.remote-ssh-edit
 code --install-extension ms-vscode-remote.remote-wsl
 code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension rafaelmaiolla.remote-vscode
+code --install-extension yzhang.markdown-all-in-one
 
 # set back
 sudo spctl --master-enable
