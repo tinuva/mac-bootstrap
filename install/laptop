@@ -217,6 +217,7 @@ sudo spctl --master-enable
 #mkdir -p ~/Library/Application\ Support/VSCodium/User
 #cat >~/Library/Application\ Support/VSCodium/User/settings.json <<EOL
 mkdir -p ~/Library/Application\ Support/Code/User/
+touch mkdir -p ~/Library/Application\ Support/Code/User/settings.json
 cat ~/Library/Application\ Support/Code/User/settings.json <<EOL
 {
     "[json]": {
