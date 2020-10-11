@@ -179,9 +179,9 @@ cask_args appdir: "/Applications"
 cask "iterm2"
 #cask "vivaldi"
 cask "gimp"
-#cask "visual-studio-code"
+cask "visual-studio-code"
 cask "brave-browser"
-cask "vscodium"
+#cask "vscodium" # remote-ssh licensing doesn't work so need vscode instead of codium
 EOF
 
 sudo chown root /usr/local/sbin/mtr
