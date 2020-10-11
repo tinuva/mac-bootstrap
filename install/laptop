@@ -215,16 +215,23 @@ sudo spctl --master-enable
 
 # Set theme for VSCodium
 #mkdir -p ~/Library/Application\ Support/VSCodium/User
-
-cat >~/Library/Application\ Support/VSCodium/User/settings.json  <<EOL
+#cat >~/Library/Application\ Support/VSCodium/User/settings.json <<EOL
+mkdir -p ~/Library/Application\ Support/Code/User/
+cat ~/Library/Application\ Support/Code/User/settings.json <<EOL
 {
     "[json]": {
         "editor.defaultFormatter": "HookyQR.beautify"
     },
     "editor.wordWrap": "on",
-    "workbench.colorTheme": "Thanatos"
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Thanatos",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "extensions.autoUpdate": true,
+    "extensions.ignoreRecommendations": true,
 }
 EOL
+#    "update.channel": "none",
 
 laptop_echo "Configuring asdf version manager..."
 if [ ! -d "$HOME/.asdf" ]; then
