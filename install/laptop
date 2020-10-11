@@ -217,8 +217,8 @@ sudo spctl --master-enable
 #mkdir -p ~/Library/Application\ Support/VSCodium/User
 #cat >~/Library/Application\ Support/VSCodium/User/settings.json <<EOL
 mkdir -p ~/Library/Application\ Support/Code/User/
-touch mkdir -p ~/Library/Application\ Support/Code/User/settings.json
-cat ~/Library/Application\ Support/Code/User/settings.json <<EOL
+touch ~/Library/Application\ Support/Code/User/settings.json
+cat <<EOF > ~/Library/Application\ Support/Code/User/settings.json 
 {
     "[json]": {
         "editor.defaultFormatter": "HookyQR.beautify"
@@ -231,7 +231,7 @@ cat ~/Library/Application\ Support/Code/User/settings.json <<EOL
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": true,
 }
-EOL
+EOF
 #    "update.channel": "none",
 
 laptop_echo "Configuring asdf version manager..."
