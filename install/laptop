@@ -310,3 +310,8 @@ npm install -g stylelint
 # sudo easy_install pip
 # pip install --user --upgrade pynvim
 # pip3 install --user --upgrade pynvim
+
+laptop_echo "Fix compaudit errors..."
+sudo chmod -R 755 /usr/local/share/zsh
+sudo chown -R root:staff /usr/local/share/zsh
+
