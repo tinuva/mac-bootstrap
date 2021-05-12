@@ -19,7 +19,10 @@
 # dockutil --no-restart --add "/Applications/Dash.app"
 # dockutil --no-restart --add "/Applications/System Preferences.app"
 
-# killall Dock
+# Disable recent windows/docs
+defaults write com.apple.dock show-recents -bool FALSE
+
+killall Dock
 
 # If you have trouble with icons appearing as generic placeholders, try running
 # the following commands.
