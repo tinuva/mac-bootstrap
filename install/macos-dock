@@ -22,6 +22,10 @@
 # Disable recent windows/docs
 defaults write com.apple.dock show-recents -bool FALSE
 
+# Enable auto-hide
+defaults write com.apple.dock autohide -bool true
+
+# Restart dock to make changes take effect
 killall Dock
 
 # If you have trouble with icons appearing as generic placeholders, try running
