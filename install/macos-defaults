@@ -256,7 +256,10 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # defaults write com.apple.dock orientation -string "left"
 
 # Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool true
+
+# Disable recent windows/docs
+defaults write com.apple.dock show-recents -bool false
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 # defaults write com.apple.dock mouse-over-hilite-stack -bool true
