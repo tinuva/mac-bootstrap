@@ -230,6 +230,7 @@ cat <<EOF > ~/Library/Application\ Support/Code/User/settings.json
     "telemetry.enableTelemetry": false,
     "extensions.autoUpdate": true,
     "extensions.ignoreRecommendations": true,
+    "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shell.osx": "/bin/zsh"
 }
 EOF
